@@ -73,13 +73,15 @@
 									</td>
 								
 								<td>
+										@if($userType == 1)
 										<div class="form-group">
 											<div class="col-md-6 col-md-offset-4">
 												<button class="deleteBtn" data-value="{{$value->id}}" type="submit" class="btn btn-primary">
 													Delete
 												</button>
 											</div>
-										</div
+										</div>
+										@endif
 								</td>
 							</tr>
 						 

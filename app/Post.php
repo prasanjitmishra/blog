@@ -12,9 +12,9 @@ class Post extends Model
 	protected $guarded = ['id'];
 	protected $dates = ['deleted_at'];
 	
-	public static function listPosts()
+	public static function listPosts($id)
 	{
-		return Post::all();
+		return Post::where('userId',$id)->get();
 	}
 	
 	public static function addPost($data)

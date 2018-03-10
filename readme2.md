@@ -1,0 +1,10 @@
+- install composer
+- clone code from git from  "https://github.com/prasanjitmishra/blog.git"
+- run command -> composer install
+- Create database in local
+- Run datase migration (in this project laravel migration is not followed, find the DB.sql file in root folder)
+- register using - http://localhost/blog/public/register
+- Login using - http://localhost/blog/public/login
+- click on the ost link on home page
+- add post by submitting
+- edit and delete as per ur choice

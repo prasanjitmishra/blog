@@ -34,12 +34,12 @@ class postsController extends Controller
      */
 	public function list(Request $request)
 	{
-		$posts = App\Post::listPosts();
+		$posts = App\Post::listPosts(Auth::id());
 		if (empty($posts)) {
 			$posts = array();
 		}
-		//echo Auth::id();
-		return view('posts.postlist',['data'=>$posts]);
+		$user =  Auth::user();
+		return view('posts.postlist',['data'=>$posts,'userType'=>$user->userType]);
 		
 		//return response()->json(['status' => 1, 'message' => '', 'data' => $posts]);;
 	}
